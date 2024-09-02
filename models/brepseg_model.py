@@ -235,7 +235,8 @@ class BrepSeg(pl.LightningModule):
             # masked出实际face feature
             pred_feature = out_face_feature[i][:end_index + 1]  # (n_node)
 
-            output_path = pathlib.Path("/home/zhang/datasets_segmentation/2_val")
+            output_path = pathlib.Path("./output/")
+            output_path.mkdir(parents=True, exist_ok=True)
             file_name = "feature_" + str(batch["id"][i].long().detach().cpu().numpy()) + ".txt"
             file_path = os.path.join(output_path, file_name)
             feature_file = open(file_path, mode="a")
