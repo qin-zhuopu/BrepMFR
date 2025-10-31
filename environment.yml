@@ -13,6 +13,8 @@ dependencies:
   - pytorch-cuda=11.7
   - six
   - dgl=1.0.0.cu117=py39_0
+  - compilers
+  - make
   - pip=23.2
   - pip:
       - pytorch-lightning==1.7.1
